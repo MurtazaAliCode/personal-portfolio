@@ -24,10 +24,20 @@ const About = () => {
             I am a Certified Agentic AI Developer and Global Full Stack expert. My work focuses on bridging the gap 
             between complex AI architectures and intuitive user experiences.
           </p>
-          <p className="text-slate-400 text-lg mb-8 leading-relaxed">
+          <p className="text-slate-400 text-lg mb-4 leading-relaxed">
             As an official contributor to the OpenAI Agents SDK, I am at the forefront of the agentic AI revolution, 
             building tools that allow autonomous systems to interact seamlessly with the physical and digital world.
           </p>
+          <div className="glass-card p-6 mb-8 border-l-4 border-cta bg-cta/5">
+            <h4 className="text-cta font-bold mb-2 flex items-center gap-2">
+              <span className="w-2 h-2 bg-cta rounded-full animate-pulse" />
+              Commercial Success
+            </h4>
+            <p className="text-slate-200 text-sm italic">
+              "Currently finalizing the acquisition of two flagship AI products with a total valuation of $3,000. 
+              Proven track record of building market-ready, high-value AI solutions."
+            </p>
+          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {skills.map((skill) => (

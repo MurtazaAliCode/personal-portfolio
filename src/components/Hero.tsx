@@ -12,15 +12,23 @@ const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-cta text-lg md:text-xl mb-4 font-medium tracking-wider uppercase">Syed Murtaza Ali</h2>
+          <h2 className="text-cta text-lg md:text-xl mb-4 font-bold tracking-widest uppercase flex items-center gap-2">
+            <span className="w-8 h-[2px] bg-cta" />
+            Syed Murtaza Ali
+          </h2>
           <h1 className="text-5xl md:text-7xl lg:text-8xl mb-6 leading-tight font-bold">
-            Certified <span className="text-cta italic">Agentic AI</span> <br />
+            Certified <span className="glow-text italic">Agentic AI</span> <br />
             Developer.
           </h1>
-          <p className="text-slate-400 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed">
-            Official contributor to OpenAI Agents SDK (Python). Expert in TypeScript, Python, 
-            and Generative AI. Building the future of autonomous digital experiences.
+          <p className="text-slate-300 text-lg md:text-xl max-w-2xl mb-6 leading-relaxed">
+            Official contributor to OpenAI Agents SDK (Python). Building high-performance 
+            AI products with <span className="text-white font-bold">$3,000+ market valuation</span>. 
           </p>
+          <div className="flex items-center gap-4 mb-10 text-sm font-mono text-cta/80">
+            <span className="px-2 py-1 bg-cta/10 rounded">CrewAI Expert</span>
+            <span className="px-2 py-1 bg-cta/10 rounded">Full Stack Pro</span>
+            <span className="px-2 py-1 bg-cta/10 rounded">Open Source</span>
+          </div>
 
           <div className="flex flex-wrap gap-4">
             <a href="#projects" className="btn-primary flex items-center gap-2">

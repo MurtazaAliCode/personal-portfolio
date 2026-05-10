@@ -6,14 +6,14 @@ import { ExternalLink, Globe } from "lucide-react";
 const projects = [
   {
     title: "Vid Downloader Pro",
-    description: "Premium HD/4K Video Downloader and MP3 Converter. $1000+ investment in quality and performance.",
+    description: "Premium HD/4K Video Downloader. $1000+ investment. Currently valued at $1,500+ for market acquisition.",
     tags: ["Next.js", "API", "Media"],
     image: "/projects/vid-downloader-v2.png",
     link: "https://vid-downloader-pro.com/",
   },
   {
     title: "StreamVault",
-    description: "Instant video streaming platform. Paste any link and watch distraction-free. Top market product.",
+    description: "Top-tier distraction-free streaming platform. High-demand market product valued at $1,500+.",
     tags: ["React", "Streaming", "UI/UX"],
     image: "/projects/stream-vault-v2.png",
     link: "https://stream-vault-omega.vercel.app/",
