@@ -60,9 +60,7 @@ const Hero = () => {
           <div className="mt-8 flex justify-center lg:justify-start">
             <Terminal />
           </div>
-        </motion.div>
-      </div>
-          
+
           {/* Badge overlays */}
           <div className="absolute -top-6 -right-6 glass-card px-4 py-2 flex items-center gap-2 border-cta/30">
             <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
