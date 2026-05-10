@@ -28,6 +28,18 @@ const certificates = [
     image: "/certificates/anthropic-mcp.png",
     date: "Aug 2025",
   },
+  {
+    title: "Model Context Protocol: Advanced Topics",
+    issuer: "Anthropic",
+    image: "/certificates/mcp-advanced.png",
+    date: "Aug 2025",
+  },
+  {
+    title: "Claude Code in Action",
+    issuer: "Anthropic",
+    image: "/certificates/claude-code.png",
+    date: "Jan 2026",
+  },
 ];
 
 const Certificates = () => {
@@ -41,7 +53,7 @@ const Certificates = () => {
         <p className="text-slate-400">Official recognition of my expertise in AI and modern development protocols.</p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {certificates.map((cert, index) => (
           <motion.div
             key={cert.title}
