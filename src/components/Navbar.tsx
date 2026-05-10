@@ -54,24 +54,29 @@ const Navbar = () => {
       </motion.div>
 
       {/* Mobile Menu */}
-      {isOpen && (
-        <motion.div 
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="absolute top-24 left-6 right-6 glass-card p-6 flex flex-col gap-4 md:hidden"
-        >
-          {navLinks.map((link) => (
+      <motion.div 
+        initial={false}
+        animate={isOpen ? { height: "auto", opacity: 1, display: "flex" } : { height: 0, opacity: 0, display: "none" }}
+        className="absolute top-24 left-6 right-6 glass-card p-6 flex flex-col gap-4 md:hidden overflow-hidden"
+      >
+        {navLinks.map((link, i) => (
+          <motion.div
+            key={link.name}
+            initial={{ x: -20, opacity: 0 }}
+            animate={isOpen ? { x: 0, opacity: 1 } : { x: -20, opacity: 0 }}
+            transition={{ delay: i * 0.1 }}
+          >
             <Link 
-              key={link.name} 
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className="text-lg font-medium hover:text-cta transition-colors"
+              className="text-lg font-medium hover:text-cta transition-colors flex items-center justify-between"
             >
               {link.name}
+              <div className="w-1.5 h-1.5 rounded-full bg-cta opacity-0 group-hover:opacity-100 transition-opacity" />
             </Link>
-          ))}
-        </motion.div>
-      )}
+          </motion.div>
+        ))}
+      </motion.div>
     </nav>
   );
 };
