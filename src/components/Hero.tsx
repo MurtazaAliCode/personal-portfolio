@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Download } from "lucide-react";
+import Terminal from "./Terminal";
 
 const Hero = () => {
   return (
@@ -53,6 +54,10 @@ const Hero = () => {
               alt="Syed Murtaza Ali" 
               className="w-full h-auto rounded-3xl border-2 border-white/10 shadow-2xl"
             />
+          </div>
+          
+          <div className="mt-8">
+            <Terminal />
           </div>
           
           {/* Badge overlays */}

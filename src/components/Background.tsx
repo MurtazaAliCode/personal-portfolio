@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 
 const Background = () => {
   const [particles, setParticles] = useState<any[]>([]);
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     const newParticles = Array.from({ length: 30 }).map((_, i) => ({
@@ -15,10 +16,25 @@ const Background = () => {
       duration: Math.random() * 20 + 10,
     }));
     setParticles(newParticles);
+
+    const handleMouseMove = (e: MouseEvent) => {
+      setMousePos({ x: e.clientX, y: e.clientY });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
   return (
     <div className="fixed inset-0 -z-20 overflow-hidden bg-[#020617] ai-grid">
+      {/* Spotlight Effect */}
+      <div 
+        className="pointer-events-none fixed inset-0 z-30 transition-opacity duration-300"
+        style={{
+          background: `radial-gradient(600px at ${mousePos.x}px ${mousePos.y}px, rgba(var(--cta-rgb), 0.08), transparent 80%)`
+        }}
+      />
+      
       {particles.map((particle) => (
         <motion.div
           key={particle.id}

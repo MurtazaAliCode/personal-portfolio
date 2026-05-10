@@ -21,7 +21,7 @@ const Contact = () => {
               </div>
               <div>
                 <p className="text-sm text-slate-500">Email Me</p>
-                <p className="text-white font-medium">hello@example.com</p>
+                <p className="text-white font-medium">syed.murtaza@example.com</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
@@ -30,7 +30,7 @@ const Contact = () => {
               </div>
               <div>
                 <p className="text-sm text-slate-500">Call Me</p>
-                <p className="text-white font-medium">+1 (234) 567-890</p>
+                <p className="text-white font-medium">Available on Request</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
@@ -39,7 +39,7 @@ const Contact = () => {
               </div>
               <div>
                 <p className="text-sm text-slate-500">Location</p>
-                <p className="text-white font-medium">San Francisco, CA</p>
+                <p className="text-white font-medium">Pakistan (Remote Worldwide)</p>
               </div>
             </div>
           </div>
@@ -58,7 +58,7 @@ const Contact = () => {
                 <input 
                   type="text" 
                   className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-cta transition-colors"
-                  placeholder="John Doe"
+                  placeholder="Your Name"
                 />
               </div>
               <div className="space-y-2">
@@ -66,7 +66,7 @@ const Contact = () => {
                 <input 
                   type="email" 
                   className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-cta transition-colors"
-                  placeholder="john@example.com"
+                  placeholder="your@email.com"
                 />
               </div>
             </div>

@@ -48,9 +48,16 @@ const Projects = () => {
             key={project.title}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{ 
+              y: -10,
+              rotateX: 2,
+              rotateY: 2,
+              scale: 1.02,
+              transition: { duration: 0.3 }
+            }}
             transition={{ delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="glass-card overflow-hidden group cursor-pointer"
+            className="glass-card overflow-hidden group cursor-pointer perspective-1000"
           >
             <div className="relative h-64 overflow-hidden">
               <img 
