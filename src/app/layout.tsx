@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Archivo, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Background from "@/components/Background";
+import Sparkles from "@/components/Sparkles";
 
 const archivo = Archivo({
   variable: "--font-archivo",
@@ -32,6 +33,7 @@ export default function RootLayout({
     >
       <body className="bg-background text-foreground antialiased selection:bg-cta selection:text-white">
         <Background />
+        <Sparkles />
         {children}
       </body>
     </html>

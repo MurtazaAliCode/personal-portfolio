@@ -22,19 +22,19 @@ const Navbar = () => {
       <motion.div 
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        className="glass-card flex items-center justify-between w-full max-w-6xl px-6 py-4"
+        className="glass-card flex items-center justify-between w-full max-w-7xl px-8 py-5"
       >
         <Link href="/" className="text-xl md:text-2xl font-bold text-cta">
           SYED<span className="text-white"> MURTAZA.</span>
         </Link>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-14">
           {navLinks.map((link) => (
             <Link 
               key={link.name} 
               href={link.href}
-              className="text-sm font-medium hover:text-cta transition-colors"
+              className="text-[11px] font-bold hover:text-cta transition-colors tracking-[0.2em] uppercase"
             >
               {link.name}
             </Link>
@@ -57,7 +57,7 @@ const Navbar = () => {
       <motion.div 
         initial={false}
         animate={isOpen ? { height: "auto", opacity: 1, display: "flex" } : { height: 0, opacity: 0, display: "none" }}
-        className="absolute top-24 left-6 right-6 glass-card p-6 flex flex-col gap-4 md:hidden overflow-hidden"
+        className="absolute top-[100%] left-6 right-6 glass-card p-6 flex flex-col gap-4 md:hidden overflow-hidden mt-4"
       >
         {navLinks.map((link, i) => (
           <motion.div

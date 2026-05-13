@@ -13,13 +13,13 @@ const skills = [
 const About = () => {
   return (
     <section id="about" className="section-padding bg-white/[0.02]">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-5xl mb-6">Syed Murtaza Ali</h2>
+          <h2 className="text-2xl md:text-3xl lg:text-5xl mb-6">Syed Murtaza Ali</h2>
           <p className="text-slate-400 text-lg mb-6 leading-relaxed">
             I am a Certified Agentic AI Developer and Global Full Stack expert. My work focuses on bridging the gap 
             between complex AI architectures and intuitive user experiences.

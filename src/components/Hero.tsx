@@ -6,8 +6,8 @@ import Terminal from "./Terminal";
 
 const Hero = () => {
   return (
-    <section id="home" className="section-padding min-h-screen flex items-center pt-24 relative overflow-hidden">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
+    <section id="home" className="section-padding min-h-screen flex items-center pt-32 md:pt-40 relative overflow-hidden">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 lg:gap-24 items-center w-full">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -18,8 +18,8 @@ const Hero = () => {
             <span className="hidden lg:block w-8 h-[2px] bg-cta" />
             Syed Murtaza Ali
           </h2>
-          <h1 className="text-4xl md:text-7xl lg:text-8xl mb-6 leading-tight font-bold">
-            Certified <span className="glow-text italic">Agentic AI</span> <br className="hidden md:block" />
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight font-bold">
+            Certified <span className="glow-text italic pr-4">Agentic AI</span> <br className="hidden md:block" />
             Developer.
           </h1>
           <p className="text-slate-300 text-base md:text-xl max-w-2xl mx-auto lg:mx-0 mb-6 leading-relaxed">

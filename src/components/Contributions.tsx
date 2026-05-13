@@ -8,8 +8,8 @@ const Contributions = () => {
     <section id="contributions" className="section-padding bg-white/[0.02]">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16">
-          <h2 className="text-3xl md:text-5xl mb-4 flex items-center gap-4">
-            <GitPullRequest className="text-cta w-10 h-10" />
+          <h2 className="text-2xl md:text-3xl lg:text-5xl mb-4 flex items-center gap-4">
+            <GitPullRequest className="text-cta w-8 h-8 md:w-10 md:h-10" />
             Open Source Impact
           </h2>
           <p className="text-slate-400 max-w-2xl">
@@ -17,7 +17,7 @@ const Contributions = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
