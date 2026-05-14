@@ -36,9 +36,13 @@ const Hero = () => {
             <a href="#projects" className="btn-primary flex items-center gap-2">
               View My Work <ArrowRight className="w-5 h-5" />
             </a>
-            <button className="px-6 md:px-8 py-3 rounded-full border border-white/10 font-bold hover:bg-white/5 transition-all flex items-center gap-2 cursor-pointer text-sm md:text-base">
+            <a 
+              href="/resume.html" 
+              target="_blank"
+              className="px-6 md:px-8 py-3 rounded-full border border-white/10 font-bold hover:bg-white/5 transition-all flex items-center gap-2 cursor-pointer text-sm md:text-base"
+            >
               Download CV <Download className="w-5 h-5" />
-            </button>
+            </a>
           </div>
         </motion.div>
 

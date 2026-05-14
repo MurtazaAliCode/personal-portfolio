@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syed Murtaza Ali - Professional Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --primary: #0F172A;
+            --cta: #3B82F6;
+            --cta-dark: #1D4ED8;
+            --accent: #F0F9FF;
+            --text-main: #1E293B;
+            --text-muted: #64748B;
+            --bg: #FFFFFF;
+            --border: #E2E8F0;
+        }
+
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white !important; padding: 0 !important; }
+            .resume-container { box-shadow: none !important; border: none !important; max-width: 100% !important; margin: 0 !important; }
+            .sidebar-box { background: #f8fafc !important; -webkit-print-color-adjust: exact; }
+            .highlight-box { background: #f0f9ff !important; -webkit-print-color-adjust: exact; }
+            a { text-decoration: none !important; color: var(--cta-dark) !important; }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-print-color-adjust: exact;
+        }
+
+        body {
+            font-family: 'Archivo', sans-serif;
+            background-color: #F1F5F9;
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Space+Grotesk', sans-serif;
+            font-weight: 700;
+        }
+
+        .resume-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            min-height: 1100px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background: var(--primary);
+            color: white;
+            padding: 40px 30px;
+        }
+
+        .sidebar h3 {
+            color: var(--cta);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 10px;
+        }
+
+        .contact-info {
+            margin-bottom: 40px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+            font-size: 13px;
+            color: #CBD5E1;
+        }
+
+        .contact-item i { color: var(--cta); }
+
+        .skill-group {
+            margin-bottom: 30px;
+        }
+
+        .skill-group h4 {
+            font-size: 12px;
+            color: #94A3B8;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .skill-tag {
+            background: rgba(255,255,255,0.05);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 11px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 40px 50px;
+        }
+
+        header {
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 48px;
+            color: var(--primary);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        header .title {
+            font-size: 18px;
+            color: var(--cta);
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            margin-top: 35px;
+        }
+
+        .section-header h2 {
+            font-size: 22px;
+            color: var(--primary);
+        }
+
+        .section-header .line {
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        .highlight-box {
+            background: var(--accent);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--cta);
+            margin-bottom: 25px;
+        }
+
+        .bold-cta {
+            color: var(--cta-dark);
+            font-weight: 700;
+        }
+
+        .valuation-badge {
+            background: #DCFCE7;
+            color: #166534;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 800;
+            font-size: 14px;
+        }
+
+        .item {
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 4px;
+        }
+
+        .item-title { font-weight: 700; font-size: 17px; color: var(--primary); }
+        .item-subtitle { color: var(--cta-dark); font-weight: 600; font-size: 14px; }
+        .item-date { color: var(--text-muted); font-size: 12px; font-weight: 500; }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            color: var(--cta);
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 5px;
+        }
+        .project-link:hover { text-decoration: underline; }
+
+        ul.bullets {
+            margin-top: 10px;
+            padding-left: 18px;
+            font-size: 14px;
+            color: var(--text-main);
+        }
+
+        ul.bullets li { margin-bottom: 6px; }
+
+        .cert-item {
+            margin-bottom: 12px;
+            padding-left: 15px;
+            border-left: 2px solid rgba(255,255,255,0.1);
+        }
+        .cert-title { font-size: 13px; font-weight: 700; }
+        .cert-meta { font-size: 11px; color: #94A3B8; }
+
+        /* Toolbar */
+        .toolbar {
+            max-width: 900px;
+            margin: 0 auto 20px auto;
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+            border: none;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+        }
+
+        .btn-primary { background: var(--cta); color: white; }
+        .btn-primary:hover { background: var(--cta-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4); }
+
+        @media (max-width: 768px) {
+            .resume-container { grid-template-columns: 1fr; }
+            .sidebar { padding: 30px; }
+            .main-content { padding: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="toolbar no-print">
+        <button class="btn btn-primary" onclick="window.print()">
+            <i data-lucide="printer"></i> Download Pro Resume (PDF)
+        </button>
+    </div>
+
+    <div class="resume-container">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="contact-info">
+                <h3>Contact</h3>
+                <div class="contact-item"><i data-lucide="mail" size="16"></i> syedmurtazaali756@gmail.com</div>
+                <div class="contact-item"><i data-lucide="phone" size="16"></i> +92 329 3038177</div>
+                <div class="contact-item"><i data-lucide="map-pin" size="16"></i> Pakistan (Remote)</div>
+                <div class="contact-item"><i data-lucide="github" size="16"></i> github.com/MurtazaAliCode</div>
+            </div>
+
+            <div class="skill-group">
+                <h3>Expertise</h3>
+                <h4>Agentic AI</h4>
+                <div class="skill-list">
+                    <span class="skill-tag">OpenAI Agents</span>
+                    <span class="skill-tag">CrewAI</span>
+                    <span class="skill-tag">Autogen</span>
+                    <span class="skill-tag">LLMs</span>
+                </div>
+                <h4 style="margin-top:15px">Full Stack</h4>
+                <div class="skill-list">
+                    <span class="skill-tag">Next.js</span>
+                    <span class="skill-tag">TypeScript</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Node.js</span>
+                </div>
+            </div>
+
+            <div class="skill-group">
+                <h3>Certifications</h3>
+                <div class="cert-item">
+                    <div class="cert-title">MCP Level 2 Developer</div>
+                    <div class="cert-meta">PIAIC | Jan 2026</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-title">Claude Code in Action</div>
+                    <div class="cert-meta">Anthropic | Jan 2026</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-title">Agentic AI Level 1</div>
+                    <div class="cert-meta">PIAIC | Jan 2026</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-title">MCP: Advanced Topics</div>
+                    <div class="cert-meta">Anthropic | Aug 2025</div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            <header>
+                <h1>Syed Murtaza Ali</h1>
+                <div class="title">Certified Agentic AI Developer & Founder</div>
+            </header>
+
+            <div class="highlight-box">
+                <p>
+                    A high-impact developer with 5+ years of experience specialized in 
+                    <span class="bold-cta">Agentic AI Architectures</span>. Official contributor 
+                    to the <span class="bold-cta">OpenAI Agents SDK</span>. Successfully launched 
+                    multiple products with a combined market valuation of 
+                    <span class="valuation-badge">$3,500+</span>.
+                </p>
+            </div>
+
+            <div class="section-header">
+                <i data-lucide="briefcase" color="#3B82F6"></i>
+                <h2>Key Experience</h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Open Source Contributor</span>
+                    <span class="item-date">2026 - Present</span>
+                </div>
+                <div class="item-subtitle">OpenAI Agents SDK (Python)</div>
+                <ul class="bullets">
+                    <li>Integrated robust <span class="bold-cta">error handling</span> for function tools in the official SDK (PR #1354).</li>
+                    <li>Developed runnable examples that are now used by thousands of AI developers globally.</li>
+                    <li>Actively contributing to the evolution of autonomous agent ecosystems.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Founder & Lead Engineer</span>
+                    <span class="item-date">2024 - 2025</span>
+                </div>
+                <div class="item-subtitle">AI Product Suite (Commercial Ventures)</div>
+                <p style="font-size: 14px; margin-top:5px">
+                    Built and scaled flagship AI SaaS products with a combined valuation of 
+                    <span class="valuation-badge">$3,500+</span>.
+                </p>
+                <ul class="bullets">
+                    <li><strong>Vid Downloader Pro</strong>: High-performance 4K media tool. Valued at $1,500 with consistent daily traffic.</li>
+                    <li><strong>StreamVault</strong>: Upcoming premium distraction-free streaming platform. Target valuation: $2,000.</li>
+                </ul>
+            </div>
+
+            <div class="section-header">
+                <i data-lucide="code" color="#3B82F6"></i>
+                <h2>Featured Projects</h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Physical AI (Humanoid Robotics)</span>
+                </div>
+                <p style="font-size: 14px">Bridging digital intelligence with physical robotics platforms.</p>
+                <a href="https://physical-ai-frontend.vercel.app/" class="project-link" target="_blank">
+                    <i data-lucide="external-link" size="12"></i> physical-ai-frontend.vercel.app
+                </a>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Pro Resume Builder</span>
+                </div>
+                <p style="font-size: 14px">AI-driven platform helping users achieve 90% job success rates.</p>
+                <a href="https://resume-builder-umber-rho.vercel.app/" class="project-link" target="_blank">
+                    <i data-lucide="external-link" size="12"></i> resume-builder-umber-rho.vercel.app
+                </a>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Vid Downloader Pro</span>
+                </div>
+                <p style="font-size: 14px">Flagship $1,500 product with high daily user traffic and 4K processing capabilities.</p>
+                <a href="https://vid-downloader-pro.com/" class="project-link" target="_blank">
+                    <i data-lucide="external-link" size="12"></i> vid-downloader-pro.com
+                </a>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">StreamVault</span>
+                </div>
+                <p style="font-size: 14px">Next-generation streaming platform. Slated for launch with a $2,000 market valuation.</p>
+                <a href="https://stream-vault-omega.vercel.app/" class="project-link" target="_blank">
+                    <i data-lucide="external-link" size="12"></i> stream-vault-omega.vercel.app
+                </a>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
