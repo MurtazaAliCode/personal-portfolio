@@ -66,9 +66,9 @@ const Hero = () => {
           </div>
 
           {/* Badge overlays */}
-          <div className="absolute -top-6 -right-6 glass-card px-4 py-2 flex items-center gap-2 border-cta/30">
-            <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-            <span className="text-xs font-bold uppercase tracking-tighter">OpenAI Contributor</span>
+          <div className="absolute top-2 right-2 sm:-top-4 sm:-right-4 glass-card px-3 sm:px-4 py-1.5 sm:py-2 flex items-center gap-2 border-cta/30 z-20 bg-background/80 backdrop-blur-md">
+            <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-green-500 rounded-full animate-pulse shrink-0" />
+            <span className="text-[10px] sm:text-xs font-bold uppercase tracking-tighter text-slate-200">OpenAI Contributor</span>
           </div>
         </motion.div>
       </div>

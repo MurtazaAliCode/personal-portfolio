@@ -8,10 +8,11 @@ import Link from "next/link";
 
 import React from "react";
 
-export default function CertificatePage({ params: paramsPromise }: { params: Promise<{ id: string }> }) {
-  const params = React.use(paramsPromise);
+export default function CertificatePage() {
+  const params = useParams();
   const router = useRouter();
-  const cert = certificates.find((c) => c.id === params.id);
+  const id = typeof params?.id === "string" ? params.id : "";
+  const cert = certificates.find((c) => c.id === id);
 
   if (!cert) {
     return (

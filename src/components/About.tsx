@@ -65,7 +65,7 @@ const About = () => {
               className="w-full h-full object-cover rounded-xl hover:scale-105 transition-all duration-500"
             />
           </div>
-          <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-cta rounded-full flex items-center justify-center text-background font-bold text-center p-4 transform rotate-12">
+          <div className="absolute bottom-2 right-2 sm:-bottom-4 sm:-right-4 w-24 h-24 sm:w-32 sm:h-32 bg-cta rounded-full flex items-center justify-center text-background font-bold text-center p-2 sm:p-4 transform rotate-12 text-xs sm:text-base shadow-xl">
             5+ Years Experience
           </div>
         </motion.div>

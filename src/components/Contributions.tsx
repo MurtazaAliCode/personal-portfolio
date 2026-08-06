@@ -64,7 +64,7 @@ const Contributions = () => {
                 className="w-full opacity-90 hover:opacity-100 transition-opacity"
               />
             </div>
-            <div className="absolute -bottom-6 -left-6 glass-card overflow-hidden shadow-2xl -rotate-3 hover:rotate-0 transition-transform duration-500 w-2/3 border-cta/30">
+            <div className="absolute bottom-0 left-0 sm:-bottom-6 sm:-left-6 glass-card overflow-hidden shadow-2xl -rotate-3 hover:rotate-0 transition-transform duration-500 w-2/3 border-cta/30">
               <img 
                 src="/contributions/openai-pr-merged.png" 
                 alt="OpenAI PR Merged Status"

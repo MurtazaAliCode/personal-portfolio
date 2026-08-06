@@ -18,18 +18,18 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center p-6">
+    <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center p-3 sm:p-6">
       <motion.div 
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        className="glass-card flex items-center justify-between w-full max-w-7xl px-8 py-5"
+        className="glass-card flex items-center justify-between w-full max-w-7xl px-4 sm:px-8 py-3.5 sm:py-5"
       >
-        <Link href="/" className="text-xl md:text-2xl font-bold text-cta">
+        <Link href="/" className="text-lg sm:text-xl md:text-2xl font-bold text-cta tracking-tight">
           SYED<span className="text-white"> MURTAZA.</span>
         </Link>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-14">
+        <div className="hidden lg:flex items-center gap-6 xl:gap-10">
           {navLinks.map((link) => (
             <Link 
               key={link.name} 
@@ -39,17 +39,15 @@ const Navbar = () => {
               {link.name}
             </Link>
           ))}
-          <div className="flex items-center gap-4 ml-4 border-l border-white/10 pl-4">
-            {/* Social links placeholder */}
-          </div>
         </div>
 
-        {/* Mobile Toggle */}
+        {/* Mobile / Tablet Toggle */}
         <button 
-          className="md:hidden text-white"
+          className="lg:hidden text-white p-1 rounded-lg hover:bg-white/10 transition-colors"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
         >
-          {isOpen ? <X /> : <Menu />}
+          {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </motion.div>
 
@@ -57,22 +55,22 @@ const Navbar = () => {
       <motion.div 
         initial={false}
         animate={isOpen ? { height: "auto", opacity: 1, display: "flex" } : { height: 0, opacity: 0, display: "none" }}
-        className="absolute top-[100%] left-6 right-6 glass-card p-6 flex flex-col gap-4 md:hidden overflow-hidden mt-4"
+        className="absolute top-[100%] left-3 right-3 sm:left-6 sm:right-6 glass-card p-6 flex flex-col gap-4 lg:hidden overflow-hidden mt-2 bg-background/95 backdrop-blur-2xl shadow-2xl border border-white/10"
       >
         {navLinks.map((link, i) => (
           <motion.div
             key={link.name}
             initial={{ x: -20, opacity: 0 }}
             animate={isOpen ? { x: 0, opacity: 1 } : { x: -20, opacity: 0 }}
-            transition={{ delay: i * 0.1 }}
+            transition={{ delay: i * 0.08 }}
           >
             <Link 
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className="text-lg font-medium hover:text-cta transition-colors flex items-center justify-between"
+              className="text-base sm:text-lg font-medium text-slate-200 hover:text-cta transition-colors flex items-center justify-between py-1"
             >
               {link.name}
-              <div className="w-1.5 h-1.5 rounded-full bg-cta opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="w-2 h-2 rounded-full bg-cta opacity-0 group-hover:opacity-100 transition-opacity" />
             </Link>
           </motion.div>
         ))}

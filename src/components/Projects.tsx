@@ -12,6 +12,20 @@ const projects = [
     link: "https://vid-downloader-pro.com/",
   },
   {
+    title: "VidFlow — AI Video Creator",
+    description: "Next-generation AI video creation platform. High-potential major product launching soon for automated prompt-to-video rendering.",
+    tags: ["Next.js", "AI Video", "TailwindCSS", "SaaS"],
+    image: "/projects/video-gen-v2.png",
+    link: "https://video-generation-app-gilt.vercel.app/",
+  },
+  {
+    title: "LingoCall",
+    description: "Real-time video calling platform with live AI cross-language translation, screen sharing & P2P encryption.",
+    tags: ["Next.js", "WebRTC", "AI Translation", "TypeScript"],
+    image: "/projects/lingocall-v2.png",
+    link: "https://lingocall-tan.vercel.app/",
+  },
+  {
     title: "StreamVault",
     description: "Top-tier distraction-free streaming platform. High-demand market product valued at $1,500+.",
     tags: ["React", "Streaming", "UI/UX"],
